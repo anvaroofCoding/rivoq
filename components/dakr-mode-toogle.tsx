@@ -12,7 +12,7 @@ interface ThemeTogglerDemoProps {
 	direction: Direction
 }
 
-export const ThemeTogglerDemo = ({ direction }: ThemeTogglerDemoProps) => {
+export const ThemeNew = ({ direction }: ThemeTogglerDemoProps) => {
 	const { theme, resolvedTheme, setTheme } = useTheme()
 
 	return (

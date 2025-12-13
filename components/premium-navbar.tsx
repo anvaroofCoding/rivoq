@@ -22,10 +22,9 @@ import {
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
 import { Bell, ChevronDown, Menu, User } from 'lucide-react'
-import { useTheme } from 'next-themes'
 import Link from 'next/link'
 import * as React from 'react'
-import { ThemeTogglerDemo } from './dakr-mode-toogle'
+import { ThemeNew } from './dakr-mode-toogle'
 
 interface NavItem {
 	title: string
@@ -123,7 +122,6 @@ const notifications = [
 export function PremiumNavbar() {
 	const [isScrolled, setIsScrolled] = React.useState(false)
 	const [mobileOpen, setMobileOpen] = React.useState(false)
-	const { theme, setTheme } = useTheme()
 	const [mounted, setMounted] = React.useState(false)
 
 	React.useEffect(() => {
@@ -210,25 +208,7 @@ export function PremiumNavbar() {
 
 					{/* Right Side Actions */}
 					<div className='flex items-center gap-2'>
-						{/* Theme Toggle */}
-						{/* <Button
-							variant='ghost'
-							size='icon'
-							onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-							className='h-9 w-9 transition-transform hover:scale-105'
-							aria-label='Toggle theme'
-						>
-							{mounted && (
-								<>
-									{theme === 'dark' ? (
-										<Sun className='h-4 w-4 transition-all' />
-									) : (
-										<Moon className='h-4 w-4 transition-all' />
-									)}
-								</>
-							)}
-						</Button> */}
-						<ThemeTogglerDemo />
+						<ThemeNew direction='vertical' />
 
 						{/* Notifications */}
 						<DropdownMenu>
