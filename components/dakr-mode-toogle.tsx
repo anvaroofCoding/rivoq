@@ -3,16 +3,11 @@ import { useTheme } from 'next-themes'
 
 import {
 	ThemeToggler,
-	type Direction,
 	type Resolved,
 	type ThemeSelection,
 } from '@/components/animate-ui/primitives/effects/theme-toggler'
 
-interface ThemeTogglerDemoProps {
-	direction: Direction
-}
-
-export const ThemeNew = ({ direction }: ThemeTogglerDemoProps) => {
+export const ThemeNew = () => {
 	const { theme, resolvedTheme, setTheme } = useTheme()
 
 	return (
@@ -20,17 +15,29 @@ export const ThemeNew = ({ direction }: ThemeTogglerDemoProps) => {
 			theme={theme as ThemeSelection}
 			resolvedTheme={resolvedTheme as Resolved}
 			setTheme={setTheme}
-			direction={direction}
+			// ❌ direction YO‘Q
 		>
 			{({ effective, toggleTheme }) => {
 				const nextTheme = effective === 'dark' ? 'light' : 'dark'
 
 				return (
-					<button onClick={() => toggleTheme(nextTheme)}>
+					<button
+						onClick={() => toggleTheme(nextTheme)}
+						className='
+							h-9 w-9
+							rounded-full
+							flex items-center justify-center
+							bg-muted/40
+							backdrop-blur
+							transition-all
+							hover:scale-105
+							active:scale-95
+						'
+					>
 						{effective === 'dark' ? (
-							<Moon className='h-4 w-4 transition-all' />
+							<Moon className='h-4 w-4 transition-all duration-300' />
 						) : (
-							<Sun className='h-4 w-4 transition-all' />
+							<Sun className='h-4 w-4 transition-all duration-300' />
 						)}
 					</button>
 				)

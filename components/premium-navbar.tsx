@@ -208,7 +208,7 @@ export function PremiumNavbar() {
 
 					{/* Right Side Actions */}
 					<div className='flex items-center gap-2'>
-						<ThemeNew direction='vertical' />
+						<ThemeNew />
 
 						{/* Notifications */}
 						<DropdownMenu>
