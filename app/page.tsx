@@ -78,7 +78,7 @@ const Home = () => {
 					</div>
 				</div>
 				<h1 className='text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl 2xl:text-8xl text-center mt-6'>
-					<AuroraText>Rivoq</AuroraText> onlyan ta'lim{' '}
+					<AuroraText>Rivoq</AuroraText> onlayn ta'lim{' '}
 					<LineShadowText className='italic' shadowColor={shadowColor}>
 						platformasida
 					</LineShadowText>{' '}

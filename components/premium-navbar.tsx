@@ -140,7 +140,7 @@ export function PremiumNavbar() {
 			className={cn(
 				'sticky top-0 z-50 w-full transition-all duration-300',
 				isScrolled
-					? 'bg-background/80 backdrop-blur-xl border-b border-border/50 shadow-sm'
+					? 'bg-background/30 backdrop-blur-xl border-b border-border/50 shadow-sm'
 					: 'bg-background/60 backdrop-blur-md'
 			)}
 		>
@@ -164,7 +164,10 @@ export function PremiumNavbar() {
 							<NavigationMenu>
 								<NavigationMenuList>
 									{navigationItems.map(item => (
-										<NavigationMenuItem key={item.title}>
+										<NavigationMenuItem
+											key={item.title}
+											className='bg-transparent '
+										>
 											{item.items ? (
 												<>
 													<NavigationMenuTrigger className='h-9 text-sm font-medium transition-colors hover:text-primary'>
@@ -194,7 +197,7 @@ export function PremiumNavbar() {
 												</>
 											) : (
 												<Link href={item.href || '#'} legacyBehavior passHref>
-													<NavigationMenuLink className='group inline-flex h-9 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50'>
+													<NavigationMenuLink className='group inline-flex h-9 w-max items-center justify-center rounded-md bg-transparent px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50'>
 														{item.title}
 													</NavigationMenuLink>
 												</Link>
@@ -212,11 +215,11 @@ export function PremiumNavbar() {
 
 						{/* Notifications */}
 						<DropdownMenu>
-							<DropdownMenuTrigger asChild>
+							<DropdownMenuTrigger asChild className='bg-transparent'>
 								<Button
 									variant='ghost'
 									size='icon'
-									className='relative h-9 w-9 transition-transform hover:scale-105'
+									className='relative h-9 w-9 transition-transform hover:scale-105 bg-none'
 									aria-label='Notifications'
 								>
 									<Bell className='h-4 w-4' />
@@ -267,11 +270,11 @@ export function PremiumNavbar() {
 
 						{/* User Menu */}
 						<DropdownMenu>
-							<DropdownMenuTrigger asChild>
-								<Button
-									variant='ghost'
-									className='relative h-9 gap-2 px-2 transition-transform hover:scale-105'
-								>
+							<DropdownMenuTrigger
+								asChild
+								className='bg-transparent border-none hover:bg-transparent'
+							>
+								<Button className='relative h-9 gap-2 px-2 transition-transform hover:scale-105 bg-transparent border-none hover:bg-transparent'>
 									<Avatar className='h-7 w-7'>
 										<AvatarImage src='/user-avatar.jpg' alt='User' />
 										<AvatarFallback>JD</AvatarFallback>

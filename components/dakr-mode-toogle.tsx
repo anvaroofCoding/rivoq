@@ -27,8 +27,7 @@ export const ThemeNew = () => {
 							h-9 w-9
 							rounded-full
 							flex items-center justify-center
-							bg-muted/40
-							backdrop-blur
+							bg-transparent
 							transition-all
 							hover:scale-105
 							active:scale-95
