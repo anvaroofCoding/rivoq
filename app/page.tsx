@@ -16,6 +16,7 @@ import { Particles } from '@/components/ui/particles'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { ShimmerButton } from '@/components/ui/shimmer-button'
 import { WordRotate } from '@/components/ui/word-rotate'
+import Feature2 from '@/components/why-us-choose'
 import { cn } from '@/lib/utils'
 import { ArrowRight, ArrowRightIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
@@ -110,6 +111,7 @@ const Home = () => {
 					refresh
 				/>
 			</div>
+			<Feature2 />
 			<div className='h-1000'></div>
 		</div>
 	)
