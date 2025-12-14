@@ -141,10 +141,10 @@ export function DotPattern({
 					transition={
 						glow
 							? {
-									duration: dot.duration,
+									// duration: dot.duration,
 									repeat: Infinity,
 									repeatType: 'reverse',
-									delay: dot.delay,
+									// delay: dot.delay,
 									ease: 'easeInOut',
 							  }
 							: {}
