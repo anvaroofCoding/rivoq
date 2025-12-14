@@ -274,15 +274,17 @@ export function PremiumNavbar() {
 								asChild
 								className='bg-transparent border-none hover:bg-transparent'
 							>
-								<Button className='relative h-9 gap-2 px-2 transition-transform hover:scale-105 bg-transparent border-none hover:bg-transparent'>
-									<Avatar className='h-7 w-7'>
+								<Button className='relative h-9 gap-2 px-2 transition-transform hover:scale-105 border-none '>
+									<Avatar className='h-7 w-7 bg-black '>
 										<AvatarImage src='/user-avatar.jpg' alt='User' />
-										<AvatarFallback>JD</AvatarFallback>
+										<AvatarFallback className='dark:text-white text-black'>
+											JD
+										</AvatarFallback>
 									</Avatar>
-									<span className='hidden md:inline-block text-sm font-medium'>
+									<span className='hidden md:inline-block text-sm font-medium dark:text-white text-black'>
 										John Doe
 									</span>
-									<ChevronDown className='h-3 w-3 opacity-50' />
+									<ChevronDown className='h-3 w-3 opacity-50 dark:text-white text-black' />
 								</Button>
 							</DropdownMenuTrigger>
 							<DropdownMenuContent
