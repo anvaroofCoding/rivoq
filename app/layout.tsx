@@ -15,10 +15,69 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-	title: 'Premium Navbar | Modern Navigation',
+	title: 'Rivoq | Dasturlash Onlayn Kurslari | Frontend, Backend',
+
+	// Sayt tavsifi (Description) - asosiy kalit soʻzlarni qamrab oladi
 	description:
-		'A premium, fully responsive navbar with animated dropdowns, dark mode, and notifications',
-	generator: 'v0.app',
+		'Rivoq.uz - Zamonaviy dasturlash kurslari: Frontend, Backend, Python, JavaScript, React, Next.js, Django, HTML, CSS. Dasturlash sohasida noldan professional darajagacha oʻqing va zamonaviy kasb egasi boʻling.',
+
+	// Saytning asosiy manzili
+	metadataBase: new URL('https://rivoq.uz'),
+
+	// Kalit soʻzlar (Keywords) - maksimal optimallashtirish uchun
+	keywords: [
+		'rivoq',
+		'rivoq.uz',
+		'dasturlash kurslari',
+		'onlayn kurslar',
+		'frontend kurslari',
+		'backend kurslari',
+		'python kurslari',
+		'javascript kurslari',
+		'react kurslari',
+		'next.js kurslari',
+		'django kurslari',
+		'zamonaviy kasb',
+		'dasturlashni oʻrganish',
+		'html css kurslari',
+		'web dasturlash',
+	],
+
+	// Muallif/platforma nomi
+	authors: [{ name: 'Rivoq Platformasi' }],
+
+	// Open Graph (Ijtimoiy tarmoqlar uchun)
+	openGraph: {
+		title:
+			'Rivoq | Dasturlash Onlayn Kurslari | Frontend, Backend, React, Python',
+		description:
+			'Rivoq.uz - Dasturlash sohasida noldan professional darajagacha oʻqing. Frontend, Backend, Python, React, Next.js kurslari.',
+		url: 'https://rivoq.uz',
+		siteName: 'Rivoq',
+		images: [
+			{
+				url: '/og-image.png', // Saytni ulashishda chiqadigan rasm manzili
+				width: 1200,
+				height: 630,
+				alt: 'Rivoq Dasturlash Kurslari',
+			},
+		],
+		locale: 'uz_UZ',
+		type: 'website',
+	},
+
+	// Twitter (Twitter/X ijtimoiy tarmog'i uchun)
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Rivoq | Dasturlash Onlayn Kurslari',
+		description:
+			'Rivoq.uz - Zamonaviy dasturlash kurslari: Frontend, Backend, Python, JavaScript, React, Next.js.',
+		creator: '@RivoqPlatformasi', // Agar Twitter akkauntingiz bo'lsa
+		images: ['/og-image.png'],
+	},
+
+	// Qoʻshimcha ma'lumotlar
+	generator: 'Next.js', // Agar Next.js ishlatilgan bo'lsa
 	icons: {
 		icon: [
 			{

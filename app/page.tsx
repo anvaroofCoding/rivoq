@@ -112,6 +112,12 @@ const Home = () => {
 				/>
 			</div>
 			<Feature2 />
+			{/* <div className='w-full grid xl:grid-cols-2 grid-cols-1 container'>
+				<div className='w-full'>
+					<SkewedInfiniteScroll />
+				</div>
+				<div className='w-full'></div>
+			</div> */}
 			<div className='h-1000'></div>
 		</div>
 	)
