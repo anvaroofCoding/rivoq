@@ -1,11 +1,3 @@
-// import HeaderText from '@/components/header-text'
-// import { DotPattern } from '@/components/ui/dot-pattern'
-// import { ScrollProgress } from '@/components/ui/scroll-progress'
-// import { ShimmerButton } from '@/components/ui/shimmer-button'
-// import { VideoText } from '@/components/ui/video-text'
-// import { cn } from '@/lib/utils'
-// import { ArrowRight } from 'lucide-react'
-
 'use client'
 import { ParticlesDemo } from '@/components/Particles-Onclick'
 import { AnimatedShinyText } from '@/components/ui/animated-shiny-text'
@@ -21,34 +13,6 @@ import { cn } from '@/lib/utils'
 import { ArrowRight, ArrowRightIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
 import { useEffect, useState } from 'react'
-
-// const Home = () => {
-// 	return (
-// 		<div className='container'>
-// 			<ScrollProgress className='top-[65px]' />
-// 			<div className='bg-background relative border-10 h-auto w-full items-center justify-center overflow-hidden rounded-lg grid xl:grid-cols-2 gap-4 grid-col-1'>
-// 				<div className='w-full  h-full flex justify-center flex-col items-start gap-6 '>
-// 					<HeaderText />
-// 					<ShimmerButton className='font-bold'>
-// 						O'qishni boshlash <ArrowRight className='ml-2' />
-// 					</ShimmerButton>
-// 				</div>
-
-// 				<div className='w-full  h-full flex justify-center items-center '></div>
-// 				<DotPattern
-// 					className={cn(
-// 						'[mask-image:radial-gradient(400px_circle_at_center,white,transparent)]'
-// 					)}
-// 				/>
-// 			</div>
-// 			<div className='relative h-[300px] w-full overflow-hidden my-10'>
-// 				<VideoText src='video/tiny.mp4'>Rivoq</VideoText>
-// 			</div>
-// 		</div>
-// 	)
-// }
-
-// export default Home
 
 const Home = () => {
 	const [key, setKey] = useState(0)
