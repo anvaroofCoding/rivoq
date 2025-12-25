@@ -2,13 +2,10 @@
 import { Button } from "@/components/ui/button";
 import { InteractiveGridPattern } from "@/components/ui/interactive-grid-pattern";
 import { cn } from "@/lib/utils";
-import { useMeQuery } from "@/services/auth.api";
 import Link from "next/link";
 import { ShineBorderDemo } from "./auth";
 
 const Page = () => {
-  const { me } = useMeQuery();
-  console.log(me);
   return (
     <div className="relative">
       <InteractiveGridPattern
