@@ -1,6 +1,4 @@
 'use client'
-
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import {
@@ -21,8 +19,9 @@ import {
 } from '@/components/ui/navigation-menu'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import { cn } from '@/lib/utils'
-import { Bell, ChevronDown, Menu, User } from 'lucide-react'
+import { Bell, ChevronDown, LogIn, Menu } from 'lucide-react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import * as React from 'react'
 import { ThemeNew } from './dakr-mode-toogle'
 
@@ -120,6 +119,8 @@ const notifications = [
 ]
 
 export function PremiumNavbar() {
+	const router = useRouter()
+
 	const [isScrolled, setIsScrolled] = React.useState(false)
 	const [mobileOpen, setMobileOpen] = React.useState(false)
 	const [mounted, setMounted] = React.useState(false)
@@ -134,6 +135,10 @@ export function PremiumNavbar() {
 	}, [])
 
 	const unreadCount = notifications.filter(n => n.unread).length
+
+	const navigate = () => {
+		router.push('/login')
+	}
 
 	return (
 		<header
@@ -267,7 +272,7 @@ export function PremiumNavbar() {
 						</DropdownMenu>
 
 						{/* User Menu */}
-						<DropdownMenu>
+						{/* <DropdownMenu>
 							<DropdownMenuTrigger
 								asChild
 								className='bg-transparent border-none hover:bg-transparent'
@@ -316,7 +321,11 @@ export function PremiumNavbar() {
 									<span>Log out</span>
 								</DropdownMenuItem>
 							</DropdownMenuContent>
-						</DropdownMenu>
+						</DropdownMenu> */}
+
+						<Button size={'sm'} className='mx-5' onClick={navigate}>
+							Kirish <LogIn />
+						</Button>
 
 						{/* Mobile Menu */}
 						<div className='lg:hidden'>

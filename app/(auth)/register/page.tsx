@@ -4,7 +4,7 @@ import { InteractiveGridPattern } from '@/components/ui/interactive-grid-pattern
 import { cn } from '@/lib/utils'
 import { LogIn } from 'lucide-react'
 import Link from 'next/link'
-import { ShineBorderDemo } from './auth'
+import { Register } from './register'
 
 const Page = () => {
 	return (
@@ -24,16 +24,16 @@ const Page = () => {
 					<h1 className='text-white font-bold'>Rivoq</h1>
 				</div>
 			</Link>
-			<Link href={'/register'}>
+			<Link href={'/login'}>
 				<div className='absolute flex items-center justify-between right-0 p-5'>
 					<Button size={'sm'} className='px-3 py-1 mr-1'>
-						Ro'yxatdan o'tish <LogIn />
+						Login <LogIn />
 					</Button>
 				</div>
 			</Link>
 			<div className='bg-black w-full h-screen'>
 				<div className=' w-full h-full flex items-center justify-center'>
-					<ShineBorderDemo />
+					<Register />
 				</div>
 			</div>
 		</div>
