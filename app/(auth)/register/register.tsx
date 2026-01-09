@@ -62,7 +62,7 @@ export function Register() {
 				} as React.CSSProperties,
 			})
 			setOtpShow(true)
-		} catch (err) {
+		} catch (err: any) {
 			toast.error(`${err?.data?.detail}`, {
 				id: 'otp', // oldingi loading toastni update qiladi
 				style: {
@@ -104,7 +104,7 @@ export function Register() {
 			setEmail('')
 			setOtp('')
 			router.push('/login')
-		} catch (err) {
+		} catch (err: any) {
 			toast.error(`${err?.data?.detail}`, {
 				id: 'otp', // oldingi loading toastni update qiladi
 				style: {
