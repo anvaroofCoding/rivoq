@@ -193,9 +193,11 @@ export function Register() {
 					</form>
 				) : (
 					<form>
-						<div className='grid'>
-							<div className=' gap-2'>
-								<Label htmlFor='email'>Email</Label>
+						<div className='grid gap-4'>
+							<div className='grid gap-2'>
+								<Label htmlFor='email' className='text-white'>
+									Email
+								</Label>
 								<Input
 									id='email'
 									type='email'
@@ -206,8 +208,10 @@ export function Register() {
 									}}
 								/>
 							</div>
-							<div className='relative gap-2'>
-								<Label htmlFor='password'>Parol</Label>
+							<div className='relative grid gap-2'>
+								<Label htmlFor='password' className='text-white'>
+									Parol
+								</Label>
 								<Input
 									id='password'
 									type={show ? 'text' : 'password'}
@@ -219,7 +223,7 @@ export function Register() {
 								/>
 								{show ? (
 									<Button
-										className='absolute right-1'
+										className='absolute right-1 top-5.5'
 										variant={'link'}
 										onClick={e => {
 											e.preventDefault()
@@ -230,7 +234,7 @@ export function Register() {
 									</Button>
 								) : (
 									<Button
-										className='absolute right-1'
+										className='absolute right-1 top-5.5'
 										variant={'link'}
 										onClick={e => {
 											e.preventDefault()

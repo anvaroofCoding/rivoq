@@ -23,7 +23,6 @@ export function ShineBorderDemo() {
 	const [email, setEmail] = React.useState('')
 	const [goLogin] = useLoginMutation()
 
-	console.log(password, email)
 	const submit = async () => {
 		const body = { email, password }
 
@@ -93,9 +92,11 @@ export function ShineBorderDemo() {
 								Google
 							</Button>
 						</div>
-						<div className='grid'>
-							<div className=' gap-2'>
-								<Label htmlFor='email'>Email</Label>
+						<div className='grid gap-4'>
+							<div className='grid gap-1'>
+								<Label htmlFor='email' className='text-white'>
+									Email
+								</Label>
 								<Input
 									id='email'
 									type='email'
@@ -106,8 +107,10 @@ export function ShineBorderDemo() {
 									}}
 								/>
 							</div>
-							<div className='relative gap-2'>
-								<Label htmlFor='password'>Parol</Label>
+							<div className='relative grid gap-1'>
+								<Label htmlFor='password' className='text-white'>
+									Parol
+								</Label>
 								<Input
 									id='password'
 									type={show ? 'text' : 'password'}
@@ -119,7 +122,7 @@ export function ShineBorderDemo() {
 								/>
 								{show ? (
 									<Button
-										className='absolute right-1'
+										className='absolute right-1 top-4.5'
 										variant={'link'}
 										onClick={e => {
 											e.preventDefault()
@@ -130,7 +133,7 @@ export function ShineBorderDemo() {
 									</Button>
 								) : (
 									<Button
-										className='absolute right-1'
+										className='absolute right-1 top-4.5'
 										variant={'link'}
 										onClick={e => {
 											e.preventDefault()

@@ -5,6 +5,7 @@ import { AuroraText } from '@/components/ui/aurora-text'
 import { Highlighter } from '@/components/ui/highlighter'
 import { LineShadowText } from '@/components/ui/line-shadow-text'
 import { Particles } from '@/components/ui/particles'
+import RuixenBentoCards from '@/components/ui/ruixen-bento-cards'
 import { ScrollProgress } from '@/components/ui/scroll-progress'
 import { ShimmerButton } from '@/components/ui/shimmer-button'
 import { WordRotate } from '@/components/ui/word-rotate'
@@ -42,7 +43,7 @@ const Home = () => {
 						</AnimatedShinyText>
 					</div>
 				</div>
-				<h1 className='text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl 2xl:text-8xl text-center mt-6'>
+				<h1 className='text-4xl font-bold tracking-tighter md:text-5xl lg:text-7xl 2xl:text-8xl text-center md:mt-6 mt-3'>
 					<AuroraText>Rivoq</AuroraText> onlayn ta'lim{' '}
 					<LineShadowText className='italic' shadowColor={shadowColor}>
 						platformasida
@@ -52,17 +53,17 @@ const Home = () => {
 						words={['Java scriptni', 'Nextni', 'Node.jsni', 'Reactni']}
 					/>{' '}
 				</h1>
-				<div className='text-center xl:mt-5 mt-3'>
-					<p className='leading-relaxed xl:w-150 w-90 text-xs'>
+				<div className='text-center xl:mt-5 mt-1'>
+					<p className='leading-relaxed xl:w-150 w-90 md:text-md text-xs'>
 						Har doimgidan{' '}
 						<Highlighter action='underline' color='#FF9800'>
 							juda tez
 						</Highlighter>{' '}
 						o'rganish. Qulay interfeysga ega bo'lgan platformada va{' '}
-						mutaxassislar tomonidan tayyorlangan kurslar orqali.
+						mutaxassislar tomonidan tayyorlangan kurslar orqali
 					</p>
 				</div>
-				<ShimmerButton className='font-bold mt-6'>
+				<ShimmerButton className='font-bold md:mt-6 mt-3'>
 					O'qishni boshlash <ArrowRight className='ml-2' />
 				</ShimmerButton>
 			</div>
@@ -76,12 +77,7 @@ const Home = () => {
 				/>
 			</div>
 			<Feature2 />
-			{/* <div className='w-full grid xl:grid-cols-2 grid-cols-1 container'>
-				<div className='w-full'>
-					<SkewedInfiniteScroll />
-				</div>
-				<div className='w-full'></div>
-			</div> */}
+			<RuixenBentoCards />
 			<div className='h-1000'></div>
 		</div>
 	)

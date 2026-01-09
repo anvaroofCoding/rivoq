@@ -26,8 +26,8 @@ const Page = () => {
 			</Link>
 			<Link href={'/login'}>
 				<div className='absolute flex items-center justify-between right-0 p-5'>
-					<Button size={'sm'} className='px-3 py-1 mr-1'>
-						Login <LogIn />
+					<Button size={'sm'} variant={'link'} className='px-3 py-1 mr-1'>
+						Login <LogIn className='ml-1 w-4' />
 					</Button>
 				</div>
 			</Link>
